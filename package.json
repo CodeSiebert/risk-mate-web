@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "A risk board game helper to track your game progress and help with calculations.",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   "homepage": "https://github.com/axelsiebert/risk-mate-web#readme",
   "engines": {
     "node": "22"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
   }
 }
