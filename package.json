@@ -1,0 +1,27 @@
+{
+  "name": "risk-mate-web",
+  "version": "0.1.0",
+  "description": "A risk board game helper to track your game progress and help with calculations.",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/axelsiebert/risk-mate-web.git"
+  },
+  "keywords": [
+    "Risk",
+    "Game",
+    "React",
+    "Helper"
+  ],
+  "author": "Axel Siebert <a.siebert_84@gmx.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axelsiebert/risk-mate-web/issues"
+  },
+  "homepage": "https://github.com/axelsiebert/risk-mate-web#readme",
+  "engines": {
+    "node": "22"
+  }
+}
