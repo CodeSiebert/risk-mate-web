@@ -26,6 +26,10 @@
     "node": "22"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/types": "^19.8.1",
+    "commitlint-plugin-jira-issue-in-scope": "^0.0.2",
     "husky": "^9.1.7"
   }
 }
