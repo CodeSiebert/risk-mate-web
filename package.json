@@ -4,7 +4,7 @@
   "description": "A risk board game helper to track your game progress and help with calculations.",
   "scripts": {
     "test": "jest",
-    "prepare": "husky"
+    "prepare": "husky && husky install"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,11 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/types": "^19.8.1",
     "commitlint-plugin-jira-issue-in-scope": "^0.0.2",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "prettier": "^3.6.2"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
