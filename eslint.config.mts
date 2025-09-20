@@ -3,7 +3,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
 import { defineConfig } from 'eslint/config';
-import eslintConfigPrettier from 'eslint-config-prettier/flat';
+import configPrettierFlat from 'eslint-config-prettier/flat';
 
 export default defineConfig([
   {
@@ -14,5 +14,5 @@ export default defineConfig([
   },
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
-  eslintConfigPrettier,
+  configPrettierFlat,
 ]);
