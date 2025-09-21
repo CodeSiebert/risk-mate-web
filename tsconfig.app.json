@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "exclude": ["src/**/*.spec.*", "src/**/__tests__/**", "src/setupTests.ts"],
+  "extends": "./tsconfig.base.json",
+  "include": ["src"]
+}

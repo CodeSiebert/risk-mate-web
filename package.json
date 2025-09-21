@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "description": "A risk board game helper to track your game progress and help with calculations.",
   "scripts": {
+    "dev": "ts-node ./src/app/index",
+    "lint": "eslint .",
     "test": "jest",
     "prepare": "husky && husky install"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/axelsiebert/risk-mate-web.git"
+    "url": "git+ssh://git@github.com:CodeSiebert/risk-mate-web.git"
   },
   "keywords": [
     "Risk",
@@ -19,9 +21,9 @@
   "author": "Axel Siebert <a.siebert_84@gmx.de>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/axelsiebert/risk-mate-web/issues"
+    "url": "https://github.com/CodeSiebert/risk-mate-web/issues"
   },
-  "homepage": "https://github.com/axelsiebert/risk-mate-web#readme",
+  "homepage": "https://github.com/CodeSiebert/risk-mate-web#readme",
   "engines": {
     "node": "22"
   },
@@ -29,12 +31,29 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/types": "^19.8.1",
+    "@eslint/js": "^9.36.0",
+    "@types/node": "^24.3.0",
+    "@typescript-eslint/parser": "^8.44.0",
     "commitlint-plugin-jira-issue-in-scope": "^0.0.2",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.4.0",
     "husky": "^9.1.7",
+    "jiti": "^2.5.1",
     "lint-staged": "^16.1.5",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.0"
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "*.{ts,tsx,js,jsx,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   }
 }
