@@ -4,12 +4,12 @@ on: push
 jobs:
   Lint:
     runs-on: ubuntu-latest
-      container:
-        image: node:22
-        env:
-          NODE_ENV: development
-      steps:
-        - name: Install Dependencies
-          run: npm ci
-        - name: Run ESLint
-          run: npm run lint
+    container:
+      image: node:22
+      env:
+        NODE_ENV: development
+    steps:
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run ESLint
+        run: npm run lint
