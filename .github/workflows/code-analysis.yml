@@ -9,7 +9,10 @@ jobs:
       env:
         NODE_ENV: development
     steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
       - name: Install Dependencies
-        run: npm ci
+        run: "npm ci"
       - name: Run ESLint
-        run: npm run lint
+        run: "npm run lint"
