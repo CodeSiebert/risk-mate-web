@@ -8,6 +8,12 @@ import { configs as tseslintConfigs } from 'typescript-eslint';
 
 export default defineConfig([
   {
+    ignores: ['node_modules/', 'dist/', 'build/', 'coverage/'],
+  },
+  tseslintConfigs.recommended,
+  pluginReact.configs.flat.recommended,
+  pluginImport.flatConfigs.recommended,
+  {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     plugins: { js },
     extends: ['js/recommended', pluginImport.flatConfigs.typescript],
@@ -38,8 +44,11 @@ export default defineConfig([
       },
     },
   },
-  tseslintConfigs.recommended,
-  pluginReact.configs.flat.recommended,
-  pluginImport.flatConfigs.recommended,
+  {
+    files: ['**/*.{test|spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    languageOptions: {
+      globals: globals.vitest,
+    },
+  },
   configPrettierFlat,
 ]);
