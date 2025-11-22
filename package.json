@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A risk board game helper to track your game progress and help with calculations.",
   "scripts": {
-    "dev": "ts-node ./src/app/index",
+    "dev": "vite serve",
     "lint": "eslint .",
     "test": "jest",
     "prepare": "husky"
