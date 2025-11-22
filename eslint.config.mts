@@ -1,16 +1,26 @@
 import js from '@eslint/js';
-import { defineConfig } from 'eslint/config';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import configPrettierFlat from 'eslint-config-prettier/flat';
 import pluginImport from 'eslint-plugin-import';
-import pluginReact from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
 import { configs as tseslintConfigs } from 'typescript-eslint';
 
 export default defineConfig([
+  globalIgnores(['node_modules/', 'dist/', 'build/', 'coverage/']),
+
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     plugins: { js },
-    extends: ['js/recommended', pluginImport.flatConfigs.typescript],
+    extends: [
+      js.configs.recommended,
+      tseslintConfigs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+      pluginImport.flatConfigs.recommended,
+      pluginImport.flatConfigs.typescript,
+    ],
     languageOptions: { globals: globals.browser },
     rules: {
       'import/order': [
@@ -20,11 +30,22 @@ export default defineConfig([
             caseInsensitive: true,
             order: 'asc',
           },
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            ['parent', 'sibling'],
+            'index',
+            'object',
+            'type',
+          ],
           named: {
             enabled: true,
-            types: 'types-first',
+            types: 'types-last',
           },
           'newlines-between': 'always',
+          'newlines-between-types': 'always',
+          sortTypesGroup: true,
         },
       ],
     },
@@ -38,8 +59,11 @@ export default defineConfig([
       },
     },
   },
-  tseslintConfigs.recommended,
-  pluginReact.configs.flat.recommended,
-  pluginImport.flatConfigs.recommended,
+  {
+    files: ['**/*.{test|spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    languageOptions: {
+      globals: globals.vitest,
+    },
+  },
   configPrettierFlat,
 ]);

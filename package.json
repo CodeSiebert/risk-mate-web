@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "A risk board game helper to track your game progress and help with calculations.",
   "scripts": {
-    "dev": "ts-node ./src/app/index",
+    "dev": "vite serve",
     "lint": "eslint .",
     "test": "jest",
-    "prepare": "husky && husky install"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -25,29 +25,36 @@
   },
   "homepage": "https://github.com/CodeSiebert/risk-mate-web#readme",
   "engines": {
-    "node": "22"
+    "node": "24"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@commitlint/types": "^19.8.1",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/types": "^20.0.0",
     "@eslint/js": "^9.36.0",
-    "@types/node": "^24.3.0",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.4",
+    "@types/react-dom": "^19.2.3",
     "@typescript-eslint/parser": "^8.44.0",
+    "@vitejs/plugin-react-swc": "^4.2.2",
     "commitlint-plugin-jira-issue-in-scope": "^0.0.2",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.4.0",
     "husky": "^9.1.7",
     "jiti": "^2.5.1",
     "lint-staged": "^16.1.5",
     "prettier": "^3.6.2",
+    "sass-embedded": "^1.93.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.44.0"
+    "typescript-eslint": "^8.44.0",
+    "vite": "^7.2.2",
+    "vitest": "^4.0.8"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,css,md}": "prettier --write"
