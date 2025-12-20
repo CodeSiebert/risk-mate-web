@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -20,5 +21,16 @@ export default defineConfig({
     hmr: true,
     open: false,
     port: 3100,
+  },
+  test: {
+    coverage: {
+      enabled: false,
+      exclude: ['src/test.setup.ts', 'src/**/*.{test,spec}.{js,ts,jsx,tsx}'],
+      include: ['src/**/*.{js,ts,jsx,tsx}'],
+      provider: 'v8',
+      reporter: ['text', 'html', 'lcov'],
+    },
+    environment: 'happy-dom',
+    globals: true,
   },
 });

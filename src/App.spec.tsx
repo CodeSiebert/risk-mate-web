@@ -1,7 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import { beforeEach, describe, expect, test } from 'vitest';
+import { beforeEach, describe, expect, test, vi } from 'vitest';
 
 import App from './App';
+
+vi.mock('./assets/images/riskmate_icon.svg', () => ({
+  default: 'mocked-svg-path',
+}));
 
 describe('AppComponent', () => {
   beforeEach(() => {
