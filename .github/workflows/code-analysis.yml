@@ -38,7 +38,7 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v7
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - uses: qltysh/qlty-action/coverage@v2
+        with:
+          token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
+          files: coverage/lcov.info
