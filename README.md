@@ -5,6 +5,9 @@
 A helper web application to track and support your risk board game rounds with calculations
 and nice statistics. Runs from your browser on every device.
 
+[![Maintainability](https://qlty.sh/gh/CodeSiebert/projects/risk-mate-web/maintainability.svg)](https://qlty.sh/gh/CodeSiebert/projects/risk-mate-web)
+[![Code Coverage](https://qlty.sh/gh/CodeSiebert/projects/risk-mate-web/coverage.svg)](https://qlty.sh/gh/CodeSiebert/projects/risk-mate-web)
+
 ## Getting started
 
 Check out code
