@@ -48,6 +48,7 @@ jobs:
         run: npx tsc --noEmit
 
   test:
+    needs: setup
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -66,12 +67,12 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: test-results
-          path: coverage/report.json
+          path: junit-reports/junit.xml
       - name: Publish test report
         uses: mikepenz/action-junit-report@v5
         if: always()
         with:
-          report_paths: 'reports/'
+          report_paths: 'junit-reports/junit.xml'
       - name: Upload coverage to Qlty
         uses: qltysh/qlty-action/coverage@v2
         with:
