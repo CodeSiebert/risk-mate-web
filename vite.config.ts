@@ -32,6 +32,9 @@ export default defineConfig({
     },
     environment: 'happy-dom',
     globals: true,
-    reporters: process.env.GITHUB_ACTIONS ? ['dot', 'github-actions'] : ['dot'],
+    reporters: [
+      'default',
+      ['junit', { outputFile: 'junit-reports/junit.xml' }],
+    ],
   },
 });
