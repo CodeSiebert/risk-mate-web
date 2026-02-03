@@ -1,16 +1,14 @@
-import './app.scss';
-import riskMateLogo from './assets/images/riskmate_icon.svg';
+import type { FC } from 'react';
 
-function App() {
+import './app.scss';
+import { StartScreen } from './features/welcome';
+
+const App: FC = () => {
   return (
-    <>
-      <div>
-        <img src={riskMateLogo}></img>
-        <h1>Welcome to Risk Mate Web</h1>
-        <p>This app will grow in the next time</p>
-      </div>
-    </>
+    <div data-testid="app-root">
+      <StartScreen></StartScreen>
+    </div>
   );
-}
+};
 
 export default App;

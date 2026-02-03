@@ -3,8 +3,8 @@ import { beforeEach, describe, expect, test, vi } from 'vitest';
 
 import App from './App';
 
-vi.mock('./assets/images/riskmate_icon.svg', () => ({
-  default: 'mocked-svg-path',
+vi.mock('./features/welcome', () => ({
+  StartScreen: () => <div data-testid="start-screen">Mocked Start Screen</div>,
 }));
 
 describe('AppComponent', () => {
@@ -12,17 +12,9 @@ describe('AppComponent', () => {
     render(<App></App>);
   });
 
-  test('should show a logo', async () => {
-    await screen.findByRole('img');
+  test('should render app container', async () => {
+    await screen.findByTestId('app-root');
 
-    expect(screen.getByRole('img')).toBeDefined();
-  });
-
-  test('should show a welcome text', async () => {
-    await screen.findByRole('heading');
-
-    expect(screen.getByRole('heading').textContent).toEqual(
-      'Welcome to Risk Mate Web',
-    );
+    expect(screen.getByTestId('app-root')).toBeTruthy();
   });
 });
