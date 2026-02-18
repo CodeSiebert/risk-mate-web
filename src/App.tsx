@@ -1,6 +1,6 @@
 import type { FC } from 'react';
-
 import './app.scss';
+
 import { StartScreen } from './features/welcome';
 
 const App: FC = () => {

@@ -1,0 +1,18 @@
+{
+  "buttons": {
+    "cancel": "Abbrechen",
+    "start": "Start"
+  },
+  "languageSelection": {
+    "a11y": {
+      "title": "Sprache wählen"
+    },
+    "languages": {
+      "de-DE": "Deutsch (Deutschland)",
+      "en-US": "English (US)"
+    },
+    "toolTips": {
+      "title": "Sprache wählen"
+    }
+  }
+}

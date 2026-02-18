@@ -1,13 +1,15 @@
 import type { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import riskMateLogo from '../../../../assets/images/riskmate_icon.svg';
 
 const StartScreen: FC = () => {
+  const { t } = useTranslation(['common', 'welcome']);
   return (
     <div className="start-screen-wrapper">
-      <h1>Welcome to Risk Mate</h1>
+      <h1>{t(($) => $.startScreen.title, { ns: 'welcome' })}</h1>
       <img src={riskMateLogo}></img>
-      <p>Want to play a round?</p>
+      <p>{t(($) => $.startScreen.introText, { ns: 'welcome' })}</p>
     </div>
   );
 };
