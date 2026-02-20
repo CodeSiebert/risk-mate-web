@@ -25,7 +25,13 @@ export default defineConfig({
   test: {
     coverage: {
       enabled: false,
-      exclude: ['src/test.setup.ts', 'src/**/*.{test,spec}.{js,ts,jsx,tsx}'],
+      exclude: [
+        'src/test.setup.ts',
+        'src/test.utils.tsx',
+        'src/core/config/**',
+        'src/main.tsx',
+        'src/**/*.{test,spec}.{js,ts,jsx,tsx}',
+      ],
       include: ['src/**/*.{js,ts,jsx,tsx}'],
       provider: 'v8',
       reporter: ['text', 'html', 'lcov'],
