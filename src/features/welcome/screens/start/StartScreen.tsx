@@ -1,7 +1,9 @@
 import type { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import riskMateLogo from '../../../../assets/images/riskmate_icon.svg';
+import riskMateLogo from '../../../../assets/images/risk_mate_wordmark.png';
+
+import './StartScreen.scss';
 
 const StartScreen: FC = () => {
   const { t } = useTranslation(['common', 'welcome']);

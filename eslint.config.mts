@@ -8,7 +8,7 @@ import globals from 'globals';
 import { configs as tseslintConfigs } from 'typescript-eslint';
 
 export default defineConfig([
-  globalIgnores(['node_modules/', 'dist/', 'build/', 'coverage/']),
+  globalIgnores(['node_modules/', 'dist/', 'build/', 'coverage/', '.vscode/']),
 
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
