@@ -1,0 +1,10 @@
+{
+  "aboutScreen": {
+    "title": "About Risk Mate Web",
+    "versionInfo": "You are using version {{version}}"
+  },
+  "startScreen": {
+    "title": "Welcome to RiskMate",
+    "introText": "Do you want to play a round?"
+  }
+}

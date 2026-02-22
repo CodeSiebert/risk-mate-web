@@ -3,12 +3,12 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 import configPrettierFlat from 'eslint-config-prettier/flat';
 import pluginImport from 'eslint-plugin-import';
 import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
+import { default as reactRefresh } from 'eslint-plugin-react-refresh';
 import globals from 'globals';
 import { configs as tseslintConfigs } from 'typescript-eslint';
 
 export default defineConfig([
-  globalIgnores(['node_modules/', 'dist/', 'build/', 'coverage/']),
+  globalIgnores(['node_modules/', 'dist/', 'build/', 'coverage/', '.vscode/']),
 
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
@@ -34,18 +34,17 @@ export default defineConfig([
             'builtin',
             'external',
             'internal',
-            ['parent', 'sibling'],
+            'parent',
+            'sibling',
             'index',
             'object',
-            'type',
           ],
           named: {
             enabled: true,
             types: 'types-last',
           },
           'newlines-between': 'always',
-          'newlines-between-types': 'always',
-          sortTypesGroup: true,
+          sortTypesGroup: false,
         },
       ],
     },

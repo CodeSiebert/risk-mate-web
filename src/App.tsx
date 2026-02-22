@@ -1,16 +1,13 @@
+import type { FC } from 'react';
 import './app.scss';
-import riskMateLogo from './assets/images/riskmate_icon.svg';
 
-function App() {
+import AppRoutes from './core/config/routes/routes';
+const App: FC = () => {
   return (
-    <>
-      <div>
-        <img src={riskMateLogo}></img>
-        <h1>Welcome to Risk Mate Web</h1>
-        <p>This app will grow in the next time</p>
-      </div>
-    </>
+    <div data-testid="app-root">
+      <AppRoutes />
+    </div>
   );
-}
+};
 
 export default App;
