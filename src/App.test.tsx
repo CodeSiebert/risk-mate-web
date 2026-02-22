@@ -1,7 +1,8 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 
 import App from './App';
+import { renderWithProviders } from './test.utils';
 
 vi.mock('./features/welcome', () => ({
   StartScreen: () => <div data-testid="start-screen">Mocked Start Screen</div>,
@@ -9,7 +10,7 @@ vi.mock('./features/welcome', () => ({
 
 describe('AppComponent', () => {
   beforeEach(() => {
-    render(<App></App>);
+    renderWithProviders(<App></App>);
   });
 
   test('should render app container', async () => {

@@ -1,12 +1,11 @@
 import type { FC } from 'react';
 import './app.scss';
 
-import { StartScreen } from './features/welcome';
-
+import AppRoutes from './core/config/routes/routes';
 const App: FC = () => {
   return (
     <div data-testid="app-root">
-      <StartScreen></StartScreen>
+      <AppRoutes />
     </div>
   );
 };

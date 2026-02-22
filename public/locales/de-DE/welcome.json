@@ -1,6 +1,10 @@
 {
-    "startScreen": {
-        "title": "Willkommen beim RiskMate",
-        "introText": "Willst Du eine Runde spielen?"
-    }
+  "aboutScreen": {
+    "title": "Über Risk Mate Web",
+    "versionInfo": "Du verwendest version {{version}}"
+  },
+  "startScreen": {
+    "title": "Willkommen beim Risk Mate",
+    "introText": "Willst Du eine Runde spielen?"
+  }
 }

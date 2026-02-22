@@ -3,7 +3,7 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 import configPrettierFlat from 'eslint-config-prettier/flat';
 import pluginImport from 'eslint-plugin-import';
 import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
+import { default as reactRefresh } from 'eslint-plugin-react-refresh';
 import globals from 'globals';
 import { configs as tseslintConfigs } from 'typescript-eslint';
 
