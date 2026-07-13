@@ -1,12 +1,15 @@
-import type { FC } from 'react';
+import { StrictMode, type FC } from 'react';
 import './app.scss';
 
-import AppRoutes from './core/config/routes/routes';
+import Layout from './core/components/layout/LayoutComponent';
+
 const App: FC = () => {
   return (
-    <div data-testid="app-root">
-      <AppRoutes />
-    </div>
+    <StrictMode>
+      <div data-testid="app-root">
+        <Layout />
+      </div>
+    </StrictMode>
   );
 };
 
